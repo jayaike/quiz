@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'quizzes',
     'nested_admin',
-
+    'rest_framework',
+    'knox'
 ]
 
 MIDDLEWARE = [
@@ -102,6 +103,13 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES':('knox.auth.TokenAuthentication',)
+}
+REST_KNOX = {
+  'TOKEN_TTL': None,
+  'TOKEN_LIMIT_PER_USER': None,
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/

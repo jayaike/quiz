@@ -9,6 +9,7 @@ verify_ssl = true
 djangorestframework = "*"
 django = "*"
 django-nested-admin = "*"
+django-rest-knox = "*"
 
 [requires]
 python_version = "3.7"
